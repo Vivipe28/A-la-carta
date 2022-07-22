@@ -1,0 +1,48 @@
+body {
+    background-image: url('../../../assets/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.loginContainer {
+    background-color: rgba(245, 245, 245, 0.425);
+    margin: 10%;
+    padding: 5%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.form-floating input,
+label {
+    text-align: left;
+}
+
+input {
+    background-color: ghostwhite;
+}
+
+.form-control:focus {
+    border-color: #C9E265;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px #C9E265;
+}
+
+img {
+    width: 50%;
+    margin-bottom: 10%;
+}
+
+.btn-success {
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.errorMsg {
+    color: #8D0000;
+    margin-top: 2%;
+    font-weight: 500;
+}
