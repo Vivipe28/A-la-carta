@@ -4,6 +4,7 @@ import { LoginObject } from 'src/app/models/login';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,6 +27,8 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('password') as FormControl
   }
 
+  disableStatus:boolean = false;
+
   constructor(private authService: AuthService, private router:Router) { }
 
   ngOnInit(): void {
@@ -36,19 +39,25 @@ export class LoginComponent implements OnInit {
   }
 
   submit(){
-    this.signIn = {
-      email: this.loginForm.value['email'],
-      password: this.loginForm.value['password'],
+    if(this.loginForm.valid){
+      this.signIn = {
+        email: this.loginForm.value['email'],
+        password: this.loginForm.value['password'],
+      }
+  
+      this.authService.login(this.signIn.email, this.signIn.password)
+      .subscribe((resp:any) => {
+          console.log(resp);
+          localStorage.setItem('user', JSON.stringify(resp.token));
+          if(resp.token !== null){
+            this.disableStatus =  true;
+            this.router.navigate(['/home'])
+          }
+      })
     }
-
-    this.authService.login(this.signIn.email, this.signIn.password)
-    .subscribe((resp:any) => {
-        console.log(resp);
-        localStorage.setItem('user', JSON.stringify(resp.token));
-        if(resp.token !== null){
-          this.router.navigate(['/home'])
-        }
-    })
+    else {
+      console.log('formulario inválido');
+    }
   }
 
 }
