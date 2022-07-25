@@ -4,18 +4,26 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { InterceptorService } from './services/interceptor.service';
+import { OrderComponent } from './shared/order/order.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    OrderComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +32,7 @@ import { InterceptorService } from './services/interceptor.service';
     HttpClientModule,
     NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
     BrowserAnimationsModule,
+    [SweetAlert2Module.forRoot()],
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}

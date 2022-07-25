@@ -1,0 +1,9 @@
+.nav-link{
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    border-radius: 10%;
+}
+.nav-link:hover{
+    background-color: #C9E265;
+}

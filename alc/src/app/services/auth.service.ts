@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
 import { environment } from "src/environments/environment";
+import Swal from "sweetalert2";
 
 @Injectable({
     providedIn: 'root'
@@ -27,8 +28,12 @@ export class AuthService {
             if (error.error instanceof ErrorEvent) {
             }
             else {
-                if (error.status === 400) {
-
+                if (error.status === 401) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: '¡Usuario o contraseña incorrecta!',
+                    })
                 }
             }
         }
@@ -39,7 +44,7 @@ export class AuthService {
         return localStorage.getItem('token')
     }
 
-    public get logIn(): boolean {
+    public get loginStatus(): boolean {
         return (localStorage.getItem('token') !== null);
     }
 

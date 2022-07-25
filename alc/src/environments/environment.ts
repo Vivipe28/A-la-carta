@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   urlApi: "http://challenge-react.alkemy.org/",
+  ApiMenu: "https://api.spoonacular.com",
 };
 
 /*

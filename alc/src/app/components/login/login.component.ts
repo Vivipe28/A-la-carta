@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.signIn.email, this.signIn.password)
       .subscribe((resp:any) => {
           console.log(resp);
-          localStorage.setItem('user', JSON.stringify(resp.token));
+          localStorage.setItem('token', JSON.stringify(resp.token));
           if(resp.token !== null){
             this.disableStatus =  true;
             this.router.navigate(['/home'])
