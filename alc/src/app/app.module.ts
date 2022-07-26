@@ -11,10 +11,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { InterceptorService } from './services/interceptor.service';
-import { OrderComponent } from './shared/order/order.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
-
-
+import { DishComponent } from './shared/dish/dish.component';
+import { ModalComponent } from './shared/modal/modal.component'
 
 
 @NgModule({
@@ -22,8 +21,9 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    OrderComponent,
     NavBarComponent,
+    DishComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

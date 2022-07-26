@@ -1,0 +1,11 @@
+<body>
+    <div class="infoDish"> 
+        <img [src]="dish.image" alt="dish" class="img-fluid">
+        <input class="id" #id value = {{dish.id}}>
+        <span class="name">{{dish.title}}</span>  
+        <button class="btn btn-dark" (click)="openModal(id.value)" >Ver detalles</button>
+        <div *ngIf="modalSwitch == true">
+            <app-modal [infoDish]="infoDish"></app-modal>
+        </div>
+    </div>
+</body>

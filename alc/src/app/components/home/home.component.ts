@@ -8,12 +8,14 @@ import { MenuService } from 'src/app/services/menu.service';
 })
 export class HomeComponent implements OnInit {
 
+  public menuArray:any;
+
   constructor(private menuService: MenuService) { }
 
   ngOnInit(): void {
-    this.menuService.veganMenu().subscribe((resp)=>{
-      console.log(resp);
-      
+    this.menuService.veganMenu().subscribe((resp:any)=>{
+      this.menuArray = resp.results;
+      console.log(this.menuArray);
     })
   }
 

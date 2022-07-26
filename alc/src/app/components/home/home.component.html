@@ -1,1 +1,9 @@
 <app-nav-bar></app-nav-bar>
+<div class="menu">
+<div class="beefMenu">
+<app-dish 
+*ngFor="let dish of menuArray"
+[dish]="dish" >
+</app-dish>
+</div>
+</div>

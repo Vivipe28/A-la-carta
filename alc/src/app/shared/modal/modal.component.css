@@ -1,0 +1,32 @@
+body{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 50%;
+    width: 50%;
+    background-color: white;
+}
+
+.bodyContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 25%;
+    background-color: #f4fff3;
+    opacity: 0.3;
+    background-image: linear-gradient(to right, #50b551, #50b551 6px, #f4fff3 6px, #f4fff3 );
+    background-size: 12px 100%;
+    padding: 10%;
+    justify-content: space-between;
+}
