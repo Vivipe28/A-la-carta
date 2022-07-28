@@ -1,0 +1,13 @@
+<body>
+    <h1>Orden</h1>
+    <div class="orderContainer" *ngFor="let dish of listOrders">
+        <input type="text" value="{{dish.title}}">
+        <span>Puntaje</span>
+        <input type="text" value="{{dish.healthScore}}">
+        <span>Tiempo de cocción</span>
+        <input type="text" value="{{dish.readyInMinutes}}">
+        <span>Precio</span>
+        <input type="text" value="{{dish.pricePerServing}}">
+        <button>Eliminar</button>
+    </div>
+</body>

@@ -1,6 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { catchError, Observable, throwError } from "rxjs";
+import { HttpClient} from "@angular/common/http";
 import { environment } from "src/environments/environment";
 
 @Injectable({

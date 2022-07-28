@@ -11,22 +11,68 @@ body{
 }
 
 .container{
-    height: 50%;
+    height: fit-content;
     width: 50%;
     background-color: white;
+    text-align: center;
 }
 
 .bodyContainer{
+    margin: 4%;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap:2%;
+}
+
+.infoContainer{
     display: flex;
     flex-direction: column;
 }
 
+.infoText{
+    color: #50b551;
+}
+
+.cookTime, .healthScore, .price{
+    color: black;
+}
+
+.btn-dark {
+    padding: 2%;
+    color: #C9E265;
+}
+
+.sectionButtons{
+    margin: 5%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    gap: 5%;
+}
 header{
-    height: 25%;
     background-color: #f4fff3;
     opacity: 0.3;
     background-image: linear-gradient(to right, #50b551, #50b551 6px, #f4fff3 6px, #f4fff3 );
     background-size: 12px 100%;
-    padding: 10%;
-    justify-content: space-between;
+}
+
+h4{
+    padding: 2%;
+    color: transparent;
+}
+
+.image{
+    padding: 3% 0%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 820px){
+    .container{
+        width: 100%;
+    }
+
+    .bodyContainer{
+        grid-template-columns: 1fr;
+    }
 }

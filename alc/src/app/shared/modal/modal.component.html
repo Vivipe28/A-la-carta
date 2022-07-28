@@ -1,11 +1,29 @@
 <body>
     <div class="container">
-        <div class="header"></div>
-        <div class="bodyContainer">
-            
-            <span class="cookTime">Tiempo de cocción: {{infoDish.readyInMinutes}}</span>
-            <span class="healthScore">Puntaje de salud: {{infoDish.healthScore}}</span>
-            <span class="price">Precio: {{infoDish.pricePerServing}}</span>
-        </div>
+        <header>
+            <h4>A la Carta</h4>
+        </header>
+        <section class="body">
+            <div class="form bodyContainer">
+                <div class="image"> <img [src]="infoDish.image" alt="imageDish" class="img-fluid"></div>
+                <div class="formGroup infoContainer">
+                    <input type="text" #title class="form-control" value="{{infoDish.title}}">
+                    <span class="infoText">Tiempo de cocción
+                        <input class="form-control" #time type="text" value="{{infoDish.readyInMinutes}} minutos"
+                            ></span>
+                    <span class="infoText">Puntaje de salud
+                        <input class="form-control" #score type="text" value="{{infoDish.healthScore}}"
+                            ></span>
+                    <span class="infoText">Precio
+                        <input class="form-control" type="text" #price value="{{infoDish.pricePerServing}}"
+                            ></span>
+                    <section class="sectionButtons">
+                        <button class="btn btn-dark" (click)="addOrder(score.value,price.value,time.value,title.value)">Agregar</button>
+                        <button class="btn btn-dark" (click)="closeModal()">Cerrar</button>
+                    </section>
+                </div>
+            </div>
+
+        </section>
     </div>
 </body>
