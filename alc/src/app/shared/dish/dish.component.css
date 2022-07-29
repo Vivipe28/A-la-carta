@@ -13,9 +13,14 @@
 
 .btn-dark{
     border-radius: 0px 0px 6px 6px;
+    color: #C9E265;
 }
 
 .img-fluid{
     border-radius: 6px 6px 0px 0px;
+}
+
+.infoDish:hover{
+    box-shadow: 1px 1px 6px #C9E265 ;
 }
 

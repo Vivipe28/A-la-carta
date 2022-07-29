@@ -1,28 +1,42 @@
 <body>
-    <h1>Orden</h1>
-    <div class="orderContainer" *ngFor="let dish of listOrders">
-        <input type="text" value="{{dish.title}}">
-        <span>Puntaje</span>
-        <input type="text" value="{{dish.healthScore}}">
-        <span>Tiempo de cocción</span>
-        <input type="text" value="{{dish.readyInMinutes}}">
-        <span>Precio</span>
-        <input type="text" value="{{dish.pricePerServing}}">
-        <button (click)="delete(dish)">Eliminar</button>
-    </div>
+    <div class="orderContainer">
+        <h2>Orden</h2>
+        <p>Resumen del pedido</p>
 
-    <div class="billContainer" *ngIf="listOrders.length > 0">
-        <div>
-            <h6>Total</h6>
-            <input type="text" value="{{total}}">
+        <div class="dishContainer" *ngFor="let dish of listOrders">
+            <div class="info">
+                <h5>{{dish.title}}</h5>
+                <div class="text">
+                    <span>Puntaje</span>
+                    <span>{{dish.healthScore}}</span>
+                </div>
+                <div class="text">
+                    <span>Tiempo de cocción</span>
+                    <span>{{dish.readyInMinutes}}</span>
+                </div>
+                <div class="text">
+                    <span>Precio</span>
+                    <span>{{dish.pricePerServing}}</span>
+                </div>
+            </div>
+            <div class="button">
+                <button class="btn btn-dark" (click)="delete(dish)">Eliminar</button>
+            </div>
         </div>
-        <div>
-            <h6>Promedio de puntaje de salud</h6>
-            <input type="text" value="{{average}}">
-        </div>
-        <div>
-            <h6>Promedio de tiempo de cocción</h6>
-            <input type="text" value="{{time}}">
+
+        <div class="billContainer" *ngIf="listOrders.length > 0">
+            <div>
+                <h6>Total</h6>
+                <span>{{total}}</span>
+            </div>
+            <div>
+                <h6>Promedio de puntaje de salud</h6>
+                <span>{{average}}</span>
+            </div>
+            <div>
+                <h6>Promedio de tiempo de cocción</h6>
+                <span>{{time}}</span>
+            </div>
         </div>
     </div>
 </body>

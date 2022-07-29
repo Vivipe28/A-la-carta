@@ -1,6 +1,63 @@
 body{
     width: 100%;
-    background-color: aliceblue;
-    min-height: 100vh;
-    margin-right: 15%
+    display: flex;
+    align-content: center;
+}
+
+h2, p{
+    padding: 3% 0%;
+}
+
+.orderContainer{
+    float: right;
+    position: fixed;
+    overflow: hidden;
+    background-color: #ecffd5;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2.5%;
+    width: 26%;
+    min-height: 80vh;
+}
+
+.dishContainer{
+    padding: 3% 1.5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    margin: 3% ;
+    border-bottom: 2px solid #C9E265;
+}
+
+.info{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.text{
+    display: flex;
+    gap: 2%;
+}
+
+.billContainer div{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    margin: 3%;
+    align-items: center;
+}
+
+.billContainer span{
+    margin-bottom: 0.5rem;
+}
+
+.btn-dark{
+    color: #C9E265;
+}
+
+.h6{
+    margin-bottom: 0%;
 }

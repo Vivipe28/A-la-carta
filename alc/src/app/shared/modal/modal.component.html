@@ -17,8 +17,9 @@
                     <span class="infoText">Precio
                         <input class="form-control" type="text" #price value="{{infoDish.pricePerServing}}"
                             ></span>
+                            <input class="vegan" #vegan value="{{infoDish.vegan}}">
                     <section class="sectionButtons">
-                        <button class="btn btn-dark" (click)="addOrder(score.value,price.value,time.value,title.value)">Agregar</button>
+                        <button class="btn btn-dark" (click)="addOrder(score.value,price.value,time.value,title.value, vegan.value)">Agregar</button>
                         <button class="btn btn-dark" (click)="closeModal()">Cerrar</button>
                     </section>
                 </div>

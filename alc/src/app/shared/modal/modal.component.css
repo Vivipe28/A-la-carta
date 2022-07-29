@@ -6,11 +6,11 @@ body{
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .container{
+    margin: 10%;
     height: fit-content;
     width: 50%;
     background-color: white;
@@ -60,6 +60,10 @@ header{
 h4{
     padding: 2%;
     color: transparent;
+}
+
+.vegan{
+    display: none;
 }
 
 .image{

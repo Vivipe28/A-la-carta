@@ -25,8 +25,6 @@ export class DishComponent implements OnInit {
     this.modalSwitch = true;
     this.switchModal.infoDish(id).subscribe((resp)=>{
       this.infoDish = resp;
-      console.log(this.infoDish);
-      
     })
   }
 }

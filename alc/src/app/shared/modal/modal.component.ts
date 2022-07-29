@@ -12,26 +12,23 @@ export class ModalComponent implements OnInit {
 
   @Input() infoDish!: infoDish;
 
-  constructor(private switchModal:MenuService, private saveOrderService: SaveOrderService) { }
+  constructor(private switchModal: MenuService, private saveOrderService: SaveOrderService) { }
 
   ngOnInit(): void {
-  
+
   }
 
-  addOrder(score:any, price:any, time:any, title:any){
-    console.log(this.infoDish.vegan);
-    
-    this.saveOrderService.orderArray.push(new infoDish(score, price, time, title));
+
+  addOrder(score: any, price: any, time: any, title: any, vegan: any) {
+    this.saveOrderService.orderArray.push(new infoDish(score, price, time, title, vegan));
     this.saveOrderService.SetTotalOrder();
     this.saveOrderService.setTimeToCook();
     this.saveOrderService.setScore();
-    
     this.closeModal()
-
   }
 
 
-  closeModal(){
+  closeModal() {
     this.switchModal.$modal.emit(false)
   }
 

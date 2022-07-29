@@ -1,8 +1,8 @@
 <app-nav-bar></app-nav-bar>
 <div class="menu">
-    <div class="beefMenu">
+    <div class="menuContainer">
         <div class="mainInfo">
-            <h4>!Bienvenido!</h4>
+            <h3>!Bienvenido!</h3>
             <p>Para conocer la información completa de cada plato, haz click sobre el botón 'Ver detalles'.</p>
             <p>De igual manera, puedes buscar el plato deseado ingresando el nombre en la caja de busqueda.</p>
             <div class="input-group mb-3">
@@ -16,13 +16,13 @@
                     minlength="2" >
             </div>
         </div>
-        <div class="gridMenu">
-            <h3>Veganos</h3>
+        <h4>Veganos</h4>
+        <div class="gridMenu">      
         <app-dish *ngFor="let dish of veganMenu | search:filterMenu " [dish]="dish" >
         </app-dish>
     </div>
+    <h4>Carnes</h4>
     <div class="gridMenu">
-        <h3>Carnes</h3>
         <app-dish *ngFor="let dish of beefMenu | search:filterMenu " [dish]="dish" ></app-dish>
     </div>
     </div>
