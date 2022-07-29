@@ -17,8 +17,13 @@
             </div>
         </div>
         <div class="gridMenu">
-        <app-dish *ngFor="let dish of menuArray | search:filterMenu " [dish]="dish" >
+            <h3>Veganos</h3>
+        <app-dish *ngFor="let dish of veganMenu | search:filterMenu " [dish]="dish" >
         </app-dish>
+    </div>
+    <div class="gridMenu">
+        <h3>Carnes</h3>
+        <app-dish *ngFor="let dish of beefMenu | search:filterMenu " [dish]="dish" ></app-dish>
     </div>
     </div>
     <app-order>

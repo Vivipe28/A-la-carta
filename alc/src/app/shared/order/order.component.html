@@ -8,6 +8,21 @@
         <input type="text" value="{{dish.readyInMinutes}}">
         <span>Precio</span>
         <input type="text" value="{{dish.pricePerServing}}">
-        <button>Eliminar</button>
+        <button (click)="delete(dish)">Eliminar</button>
+    </div>
+
+    <div class="billContainer" *ngIf="listOrders.length > 0">
+        <div>
+            <h6>Total</h6>
+            <input type="text" value="{{total}}">
+        </div>
+        <div>
+            <h6>Promedio de puntaje de salud</h6>
+            <input type="text" value="{{average}}">
+        </div>
+        <div>
+            <h6>Promedio de tiempo de cocción</h6>
+            <input type="text" value="{{time}}">
+        </div>
     </div>
 </body>

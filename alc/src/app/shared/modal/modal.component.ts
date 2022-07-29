@@ -18,10 +18,14 @@ export class ModalComponent implements OnInit {
   
   }
 
-  addOrder(title:any, price:any, score:any, time: any){
-
+  addOrder(score:any, price:any, time:any, title:any){
+    console.log(this.infoDish.vegan);
+    
     this.saveOrderService.orderArray.push(new infoDish(score, price, time, title));
-    console.log(this.saveOrderService.orderArray);
+    this.saveOrderService.SetTotalOrder();
+    this.saveOrderService.setTimeToCook();
+    this.saveOrderService.setScore();
+    
     this.closeModal()
 
   }

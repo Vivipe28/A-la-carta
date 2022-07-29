@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { infoDish } from 'src/app/models/infoDish';
 import { SaveOrderService } from 'src/app/services/save-order.service';
 
 @Component({
@@ -9,11 +8,43 @@ import { SaveOrderService } from 'src/app/services/save-order.service';
 })
 export class OrderComponent implements OnInit {
 
-  constructor(private saveOrderService : SaveOrderService) { }
+  total: any = 0;
 
-  listOrders = this.saveOrderService.orderArray; 
+  average: any = 0;
+
+  time:any = 0; 
+
+  constructor(private saveOrderService: SaveOrderService) { }
+
+  listOrders = this.saveOrderService.orderArray;
 
   ngOnInit(): void {
   }
+
+  ngDoCheck() {
+    this.setTotal()
+    this.setAverage()
+    this.setTime()
+  }
+
+  setTotal() {
+    return this.total = this.saveOrderService.SetTotalOrder()
+  }
+
+  setAverage(){
+    return this.average = this.saveOrderService.setScore()/this.listOrders.length
+  }
+
+  setTime(){
+    return this.time = this.saveOrderService.setTimeToCook()/this.listOrders.length
+  }
+
+  delete(dish:any){
+    let i = this.listOrders.indexOf(dish)
+    if(i !== -1){
+      this.listOrders.splice(i, 1)
+    }
+  }
+
 
 }

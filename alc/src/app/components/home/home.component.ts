@@ -11,14 +11,19 @@ export class HomeComponent implements OnInit {
 
   filterMenu:any = '';
 
-  public menuArray:any;
+  public veganMenu:any;
+
+  public beefMenu:any;
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit(): void {
     this.menuService.veganMenu().subscribe((resp:any)=>{
-      this.menuArray = resp.results;
-      console.log(this.menuArray);
+      this.veganMenu = resp.results;
+    })
+
+    this.menuService.beefMenu().subscribe((resp:any)=> {
+      this.beefMenu = resp.results
     })
 
     let words:any = {};

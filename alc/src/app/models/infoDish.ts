@@ -4,6 +4,7 @@ export class infoDish {
     readyInMinutes!: number;
     title!: string;
     image!:string;
+    vegan!:boolean;
 
     constructor(healthScore:any, pricePerServing:number, readyInMinutes:number, title:string){
         this.healthScore = healthScore;

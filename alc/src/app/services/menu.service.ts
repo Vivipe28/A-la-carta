@@ -14,12 +14,17 @@ export class MenuService {
   constructor(private http: HttpClient) { }
 
   veganMenu(){
-    const path = this.urlMenu + '/recipes/complexSearch?apiKey=82df6de3d38145b994a873d7bb450a24&query=vegetarian';
+    const path = this.urlMenu + '/recipes/complexSearch?apiKey=526ff739c19f430a965e6862805f6c2a&query=vegan';
+    return this.http.get(path)
+  }
+
+  beefMenu(){
+    const path = this.urlMenu + '/recipes/complexSearch?apiKey=526ff739c19f430a965e6862805f6c2a&query=beef';
     return this.http.get(path)
   }
 
   infoDish(id:string){
-    const path = this.urlMenu + '/recipes/' + id + '/information?apiKey=82df6de3d38145b994a873d7bb450a24';
+    const path = this.urlMenu + '/recipes/' + id + '/information?apiKey=526ff739c19f430a965e6862805f6c2a';
     console.log(path);
     
     return this.http.get(path)
