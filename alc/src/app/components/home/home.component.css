@@ -18,3 +18,18 @@
 h3{
     width: 100%;
 }
+
+@media screen and (max-width: 820px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .gridMenu{
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 5%;
+    }
+
+    .beefContainer, .veganContainer{
+        margin-bottom: 40%;
+    }
+}

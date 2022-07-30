@@ -7,15 +7,15 @@
             <div class="form bodyContainer">
                 <div class="image"> <img [src]="infoDish.image" alt="imageDish" class="img-fluid"></div>
                 <div class="formGroup infoContainer">
-                    <input type="text" #title class="form-control" value="{{infoDish.title}}">
+                    <input type="text" #title class="title" value="{{infoDish.title}}" disabled>
                     <span class="infoText">Tiempo de cocción
-                        <input class="form-control" #time type="text" value="{{infoDish.readyInMinutes}}"
+                        <input class="form-control" #time type="text" value="{{infoDish.readyInMinutes}}" disabled
                             ></span>
                     <span class="infoText">Puntaje de salud
-                        <input class="form-control" #score type="text" value="{{infoDish.healthScore}}"
+                        <input class="form-control" #score type="text" value="{{infoDish.healthScore}}" disabled
                             ></span>
                     <span class="infoText">Precio
-                        <input class="form-control" type="text" #price value="{{infoDish.pricePerServing}}"
+                        <input class="form-control" type="text" #price value="{{infoDish.pricePerServing}}" disabled
                             ></span>
                             <input class="vegan" #vegan value="{{infoDish.vegan}}">
                     <section class="sectionButtons">

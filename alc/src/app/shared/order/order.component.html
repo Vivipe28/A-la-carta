@@ -1,8 +1,10 @@
+
+
 <body>
     <div class="orderContainer">
         <h2>Orden</h2>
-        <p>Resumen del pedido</p>
-
+        <p>Selecciona los platos que deseas ordenar y aquí podrás ver el resumen de tu pedido</p>
+        <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
         <div class="dishContainer" *ngFor="let dish of listOrders">
             <div class="info">
                 <h5>{{dish.title}}</h5>
@@ -23,6 +25,7 @@
                 <button class="btn btn-dark" (click)="delete(dish)">Eliminar</button>
             </div>
         </div>
+    </cdk-virtual-scroll-viewport>
 
         <div class="billContainer" *ngIf="listOrders.length > 0">
             <div>
@@ -40,3 +43,4 @@
         </div>
     </div>
 </body>
+

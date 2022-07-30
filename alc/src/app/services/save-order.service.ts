@@ -7,11 +7,11 @@ export class SaveOrderService {
 
   orderArray: any = []
 
-  score:number = 0;
+  score:any= 0;
 
-  total:number = 0;
+  total:any= 0;
 
-  time:number = 0;
+  time:any = 0;
 
   SetTotalOrder() {
     this.total = 0;
@@ -20,7 +20,7 @@ export class SaveOrderService {
         this.total = this.total + Number(item.pricePerServing);
       });
     };
-    return this.total
+    return this.total.toFixed(2)
   }
 
   setScore(){
