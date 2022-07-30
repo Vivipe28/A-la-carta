@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  urlApi: "http://challenge-react.alkemy.org/",
-  ApiMenu: "http://api.spoonacular.com",
+  urlApi: "https://challenge-react.alkemy.org/",
+  ApiMenu: "https://api.spoonacular.com",
 };
