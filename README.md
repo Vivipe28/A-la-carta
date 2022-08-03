@@ -6,7 +6,8 @@
 * [1. Introducción](#1-introducción)
 * [2. Guía de Uso](#2-guia-de-uso)
 * [3. Tecnologías y herramientas](#3-tecnologías-y-herramientas)
-* [4. Autor](#4-autor)
+* [4. Recomendaciones ](#4-recomendaciones)
+* [5. Autor](#5-autor)
 
 ***
 
@@ -45,6 +46,10 @@ La aplicación fue desarrollada utilizando las siguientes tecnologías y herrami
 4. TypeScript
 5. API REST - Spoonacular
 
-## 4. Autor
+## 4. Recomendaciones
+
+Si tienes problemas al tratar de acceder a la aplicación desde el link de despliegue, puedes ingresar a la configuración de tu navegador y modificar los permisos de contenido del sitio web.
+
+## 5. Autor
 
 ⌨️ Hecho por [Vivipe28](https://github.com/Vivipe28)
